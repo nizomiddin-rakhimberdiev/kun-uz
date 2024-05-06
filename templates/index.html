@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %} O'zbekiston {% endblock %}
+
+
+{% block content %}
+    {% for news in news_list %}
+    	<ul>
+        <li><a href="">
+            <h3>{{ news.title }}</h3>
+        </a></li>
+        </ul>
+    {% endfor %}
+    
+{% endblock %}
+
