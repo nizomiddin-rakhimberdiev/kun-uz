@@ -5,7 +5,7 @@
 {% block content %}
     {% for news in news_list %}
     	<ul>
-        <li><a href="">
+        <li><a href="{% url 'detail' news.id %}">
             <h3>{{ news.title }}</h3>
         </a></li>
         </ul>

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Detail Page{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="col-md-12 p-5">
+            <h1>{{ news.title }}</h1>
+            {% if news.subtitle %}
+                <h4>{{ news.subtitle }}</h4>
+            {% endif %}
+{#            {% if news.image %}#}
+                <img src="{{ news.image }}" alt="">
+                
+{#            {% endif %}#}
+            <p>
+                {{ news.content }}
+            </p>
+            Posted by {{ news.author }} {{ news.created }}
+        </div>
+    </div>
+{% endblock %}

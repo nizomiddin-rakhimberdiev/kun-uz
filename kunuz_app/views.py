@@ -26,3 +26,11 @@ class JahonNewsView(View):
         return render(request, 'index.html', context)
 
 
+class DetailView(View):
+    def get(self, request, id):
+        news = News.objects.get(id=id)
+        context = {'news': news}
+        return render(request, 'detail.html', context)
+        print(news.image)
+
+
